@@ -4,7 +4,7 @@ export default function Message() {
   }
   return (
     <div>
-      <button onClick={handleClick}>Click here to get a message</button>
+      <button onClick={handleClick}>Click here to get a message aaaaaaa</button>
     </div>
   );
 }
