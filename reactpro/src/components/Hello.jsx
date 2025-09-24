@@ -4,9 +4,9 @@ function displayMessage() {
   return ("wow, it works!");
 }
 
-function Hello({ name, message, emoji }) {
+function Hello({person}) {
   // const { name, message } = props;
-  return <h1>Hello from React! {name} {message} {emoji}</h1>;
+  return <h1> {person.message} {person.name} {person.emoji}  {person.seatNumbers}</h1>;
 }
 
 export default Hello;                                              
