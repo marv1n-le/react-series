@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import Hello from "./components/Hello"
+import { useState } from "react";
+import Hello from "./components/Hello";
 function App() {
   return (
     <div className="App">
-      <Hello />
+      <Hello name="Lee" message="wow, it works!" />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
