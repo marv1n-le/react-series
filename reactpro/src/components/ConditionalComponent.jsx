@@ -1,3 +1,4 @@
+import Code from "./Code";
 import Welcome from "./Welcome";
 
 export default function ConditionalComponent() {
@@ -9,17 +10,21 @@ export default function ConditionalComponent() {
   //   return <Code />;
   // }
 
-  let messageOne = <h1>This is message 1</h1>
-  let messageTwo = <h1>This is message 2</h1>
-  let message;
+  let messageOne = <h1>This is message 1</h1>;
+  let messageTwo = <h1>This is message 2</h1>;
+  // let message;
 
-  const display = false;
+  // const display = false;
 
-  if (display) {
-    message = messageOne;
-  } else {
-    message = messageTwo;
-  }
+  // if (display) {
+  //   message = messageOne;
+  // } else {
+  //   message = messageTwo;
+  // }
 
-  return message;
+  // return message;
+
+  const display = true;
+
+  return display ? <Welcome /> : <Code />;
 }
