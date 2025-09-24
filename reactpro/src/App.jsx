@@ -3,7 +3,7 @@ import Hello from "./components/Hello";
 function App() {
   return (
     <div className="App">
-      <Hello name="Lee" message="wow, it works!" />
+      <Hello name="Lee" message="wow, it works!" emoji="🚀" />
     </div>
   );
 }
