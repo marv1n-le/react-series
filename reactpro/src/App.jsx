@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Hello from "./components/Hello";
+import Fruits from "./components/Fruits";
+import ConditionalComponent from "./components/ConditionalComponent";
+
 function App() {
   const person = {
     name: "Marvin",
@@ -9,8 +12,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Hello 
-      person = {person}
+      <ConditionalComponent
       />
     </div>
   );
