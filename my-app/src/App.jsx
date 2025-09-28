@@ -1,6 +1,9 @@
 import { useReducer } from "react";
 import { useState } from "react";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
 // function App() {
 //   const [count, setCount] = useState(0);
 //   const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
@@ -48,37 +51,13 @@ import { useState } from "react";
 // }
 
 function App() {
-  function reducer(state, action) {
-    if (action.type === "add") {
-      return {
-        ...state,
-        balance: state.balance + action.payload
-      }
-    }
-    if (action.type === "sub") {
-      return {
-        ...state,
-        balance: state.balance - action.payload
-      }
-    }
-  }
-  const [state, dispatch] = useReducer(reducer, {
-    balance: 0,
-  })
-  const [amount, setAmount] = useState(0);
-
-  return <div>
-    {state.balance}
-    <input type="text" 
-    onChange={(e) => setAmount(Number(e.target.value))}
-    />
-    <button onClick={() =>
-      dispatch({ type: "add", payload: Number(amount)})
-    }>Deposit</button>
-    <button onClick={() => 
-      dispatch({ type: "sub", payload: Number(amount) })
-    }>Widthdraw</button>
-  </div>
+  return <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="*" element={<PageNotFound />} />
+  </Routes>
+  </BrowserRouter>
 }
 
 export default App;
