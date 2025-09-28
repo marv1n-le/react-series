@@ -28,4 +28,4 @@ export default function Search({ foodData, setFoodData }) {
       />
     </div>
   );
-}
+}ˇ
