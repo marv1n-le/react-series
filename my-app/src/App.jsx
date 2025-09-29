@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
+import Nav from "./Nav";
 // function App() {
 //   const [count, setCount] = useState(0);
 //   const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
@@ -52,6 +53,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return <BrowserRouter>
+  <Nav />
   <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/dashboard" element={<Dashboard />} />
