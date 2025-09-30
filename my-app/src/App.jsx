@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
 import Nav from "./Nav";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 // function App() {
 //   const [count, setCount] = useState(0);
 //   const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
@@ -56,7 +58,10 @@ function App() {
   <Nav />
   <Routes>
     <Route path="/" element={<HomePage />} />
-    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/dashboard" element={<Dashboard />}>
+      <Route path="profile" element={<Profile />} />
+      <Route path="settings" element={<Settings />} />
+    </Route>
     <Route path="*" element={<PageNotFound />} />
   </Routes>
   </BrowserRouter>
