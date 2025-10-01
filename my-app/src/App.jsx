@@ -11,6 +11,7 @@ import Products from "./pages/Products";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import { UserProvider } from "./context/UserContext";
+import Logout from "./Logout";
 // function App() {
 //   const [count, setCount] = useState(0);
 //   const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
@@ -80,6 +81,7 @@ function App() {
       <UserProvider>
         <Checkout />
         <Login />
+        <Logout />
       </UserProvider>
     </div>
   );
