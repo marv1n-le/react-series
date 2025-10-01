@@ -12,6 +12,7 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 import { UserProvider } from "./context/UserContext";
 import Logout from "./Logout";
+import useDisplayMessage from "./hooks/useDisplayMessage";
 // function App() {
 //   const [count, setCount] = useState(0);
 //   const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
@@ -75,16 +76,24 @@ import Logout from "./Logout";
 
 // export default App;
 
+// function App() {
+//   return (
+//     <div>
+//       <UserProvider>
+//         <Checkout />
+//         <Login />
+//         <Logout />
+//       </UserProvider>
+//     </div>
+//   );
+// }
+
 function App() {
-  return (
-    <div>
-      <UserProvider>
-        <Checkout />
-        <Login />
-        <Logout />
-      </UserProvider>
-    </div>
-  );
+  const [message, displayMessage] = useDisplayMessage();
+  displayMessage();
+  return <div>
+    message: { message }
+  </div>;
 }
 
 export default App;
